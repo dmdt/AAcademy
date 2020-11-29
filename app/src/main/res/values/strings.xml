@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AAcademy</string>
+    <string name="film_title_label">Avengers: End Game</string>
+    <string name="tag_line_label">Action, Adventure, Fantasy</string>
+    <string name="review_count_label">125 REVIEWS</string>
+    <string name="pg_mark_label">13+</string>
 </resources>
