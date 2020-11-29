@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/background_color">
+        android:layout_height="wrap_content" >
         <!--    Header-->
         <ImageView
             android:id="@+id/ivBackgroundImage"
@@ -216,6 +216,7 @@
             android:progressBackgroundTint="@color/gray_text"
             android:progressTint="@color/pink_text"
             android:stepSize="1"
+            android:rating="4"
             app:layout_constraintStart_toEndOf="@id/startMargin"
             app:layout_constraintTop_toBottomOf="@id/tvTagline" />
 
