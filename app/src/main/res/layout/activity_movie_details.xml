@@ -20,105 +20,100 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <LinearLayout
-            android:id="@+id/avatarHolder1"
+
+        <ImageView
+            android:id="@+id/ivActor1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@id/avatarHolder2"
-            app:layout_constraintStart_toEndOf="@id/startMargin"
-            app:layout_constraintTop_toBottomOf="@id/tvCast">
+            android:adjustViewBounds="true"
+            android:src="@drawable/avatar_1"
+            android:layout_marginTop="@dimen/image_margin_top"
+            android:layout_marginEnd="@dimen/image_margin_end"
+            app:layout_constraintTop_toBottomOf="@id/tvCast"
+            app:layout_constraintEnd_toStartOf="@+id/ivActor2"
+            app:layout_constraintStart_toStartOf="@id/startMargin" />
 
-            <ImageView
-                android:id="@+id/avatar1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="center"
-                android:src="@drawable/avatar_1" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/avatar_1_label"
-                android:textColor="@color/white"
-                android:textSize="@dimen/smaller_text_size" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/avatarHolder2"
+        <ImageView
+            android:id="@+id/ivActor2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@id/avatarHolder3"
-            app:layout_constraintStart_toEndOf="@id/avatarHolder1"
-            app:layout_constraintTop_toBottomOf="@id/tvCast">
+            android:adjustViewBounds="true"
+            android:src="@drawable/avatar_2"
+            android:layout_marginStart="@dimen/image_margin_start"
+            android:layout_marginTop="@dimen/image_margin_top"
+            android:layout_marginEnd="@dimen/image_margin_end"
+            app:layout_constraintTop_toBottomOf="@id/tvCast"
+            app:layout_constraintEnd_toStartOf="@+id/ivActor3"
+            app:layout_constraintStart_toEndOf="@+id/ivActor1" />
 
-            <ImageView
-                android:id="@+id/avatar2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="center"
-                android:src="@drawable/avatar_2" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/avatar_2_label"
-                android:textColor="@color/white"
-                android:textSize="@dimen/smaller_text_size" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/avatarHolder3"
+        <ImageView
+            android:id="@+id/ivActor3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@+id/avatarHolder4"
-            app:layout_constraintStart_toEndOf="@+id/avatarHolder2"
-            app:layout_constraintTop_toBottomOf="@id/tvCast">
+            android:adjustViewBounds="true"
+            android:src="@drawable/avatar_3"
+            android:layout_marginStart="@dimen/image_margin_start"
+            android:layout_marginTop="@dimen/image_margin_top"
+            android:layout_marginEnd="@dimen/image_margin_end"
+            app:layout_constraintTop_toBottomOf="@id/tvCast"
+            app:layout_constraintEnd_toStartOf="@+id/ivActor4"
+            app:layout_constraintStart_toEndOf="@+id/ivActor2" />
 
-            <ImageView
-                android:id="@+id/avatar3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="center"
-                android:src="@drawable/avatar_3" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/avatar_3_label"
-                android:textColor="@color/white"
-                android:textSize="@dimen/smaller_text_size" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/avatarHolder4"
+        <ImageView
+            android:id="@+id/ivActor4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@+id/endMargin"
-            app:layout_constraintStart_toEndOf="@+id/avatarHolder3"
-            app:layout_constraintTop_toBottomOf="@id/tvCast">
+            android:adjustViewBounds="true"
+            android:src="@drawable/avatar_4"
+            android:layout_marginStart="@dimen/image_margin_start"
+            android:layout_marginTop="@dimen/image_margin_top"
+            app:layout_constraintTop_toBottomOf="@id/tvCast"
+            app:layout_constraintEnd_toEndOf="@id/endMargin"
+            app:layout_constraintStart_toEndOf="@+id/ivActor3" />
 
-            <ImageView
-                android:id="@+id/avatar4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="center"
-                android:src="@drawable/avatar_4" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/avatar_1_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/smaller_text_size"
+            android:layout_marginTop="@dimen/actor_name_margin_top"
+            app:layout_constraintStart_toStartOf="@id/ivActor1"
+            app:layout_constraintTop_toBottomOf="@id/ivActor1"
+            app:layout_constraintEnd_toEndOf="@id/ivActor1"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/avatar_4_label"
-                android:textColor="@color/white"
-                android:textSize="@dimen/smaller_text_size" />
-        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/avatar_2_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/smaller_text_size"
+            android:layout_marginTop="@dimen/actor_name_margin_top"
+            app:layout_constraintStart_toStartOf="@id/ivActor2"
+            app:layout_constraintTop_toBottomOf="@id/ivActor2"
+            app:layout_constraintEnd_toEndOf="@id/ivActor2"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/avatar_3_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/smaller_text_size"
+            android:layout_marginTop="@dimen/actor_name_margin_top"
+            app:layout_constraintStart_toStartOf="@id/ivActor3"
+            app:layout_constraintTop_toBottomOf="@id/ivActor3"
+            app:layout_constraintEnd_toEndOf="@id/ivActor3"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/avatar_4_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/smaller_text_size"
+            android:layout_marginTop="@dimen/actor_name_margin_top"
+            app:layout_constraintStart_toStartOf="@id/ivActor4"
+            app:layout_constraintTop_toBottomOf="@id/ivActor4"
+            app:layout_constraintEnd_toEndOf="@id/ivActor4"/>
 
         <TextView
             android:id="@+id/tvPgMark"
