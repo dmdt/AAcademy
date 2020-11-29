@@ -22,6 +22,7 @@
         android:id="@+id/rbRating"
         android:isIndicator="false"
         android:progressTint="@color/pink_text"
+        android:progressBackgroundTint="@color/gray_text"
         android:stepSize="1"
         android:layout_marginTop="@dimen/star_margin_bottom"
         style="@style/Widget.AppCompat.RatingBar.Small"
@@ -175,7 +176,7 @@
         android:textSize="@dimen/normal_text_size"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/rbRating"
-        app:layout_constraintTop_toBottomOf="@id/reviewStart"
+        app:layout_constraintTop_toBottomOf="@id/tvTagline"
         tools:text="125 REVIEWS" />
     <!--    Description area-->
 
@@ -189,7 +190,7 @@
         android:textSize="@dimen/normal_text_size"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/startMargin"
-        app:layout_constraintTop_toBottomOf="@id/reviewEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvReviewCount"
         tools:text="Storyline" />
 
     <TextView
@@ -214,7 +215,7 @@
         android:textSize="@dimen/normal_text_size"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/startMargin"
-        app:layout_constraintTop_toBottomOf="@id/descriptionEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
         tools:text="Cast" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -233,31 +234,10 @@
         app:layout_constraintGuide_percent="0.309" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/reviewStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/tvTagline" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/reviewEnd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/tvReviewCount" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/endMargin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="16dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/descriptionEnd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
