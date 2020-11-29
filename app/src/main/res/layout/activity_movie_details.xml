@@ -1,243 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background_color">
-    <!--    Header-->
-    <ImageView
-        android:id="@+id/ivBackgroundImage"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="298dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/film_background"
-        app:layout_constraintBottom_toTopOf="@id/endHeader"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatRatingBar
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/rbRating"
-        android:isIndicator="false"
-        android:progressTint="@color/pink_text"
-        android:progressBackgroundTint="@color/gray_text"
-        android:stepSize="1"
-        android:layout_marginTop="@dimen/star_margin_bottom"
-        style="@style/Widget.AppCompat.RatingBar.Small"
-        app:layout_constraintStart_toEndOf="@id/startMargin"
-        app:layout_constraintTop_toBottomOf="@id/tvTagline"/>
-
-    <LinearLayout
-        android:id="@+id/avatarHolder1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tvCast"
-        app:layout_constraintStart_toEndOf="@id/startMargin"
-        app:layout_constraintEnd_toStartOf="@id/avatarHolder2">
-
+        android:background="@color/background_color">
+        <!--    Header-->
         <ImageView
-            android:id="@+id/avatar1"
+            android:id="@+id/ivBackgroundImage"
             android:layout_width="match_parent"
+            android:layout_height="298dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/film_background"
+            app:layout_constraintBottom_toTopOf="@id/endHeader"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/avatarHolder1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/avatar_1"
-            android:adjustViewBounds="true"
-            android:scaleType="center" />
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/avatarHolder2"
+            app:layout_constraintStart_toEndOf="@id/startMargin"
+            app:layout_constraintTop_toBottomOf="@id/tvCast">
+
+            <ImageView
+                android:id="@+id/avatar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="center"
+                android:src="@drawable/avatar_1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/avatar_1_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smaller_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/avatarHolder2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/avatarHolder3"
+            app:layout_constraintStart_toEndOf="@id/avatarHolder1"
+            app:layout_constraintTop_toBottomOf="@id/tvCast">
+
+            <ImageView
+                android:id="@+id/avatar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="center"
+                android:src="@drawable/avatar_2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/avatar_2_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smaller_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/avatarHolder3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/avatarHolder4"
+            app:layout_constraintStart_toEndOf="@+id/avatarHolder2"
+            app:layout_constraintTop_toBottomOf="@id/tvCast">
+
+            <ImageView
+                android:id="@+id/avatar3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="center"
+                android:src="@drawable/avatar_3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/avatar_3_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smaller_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/avatarHolder4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/endMargin"
+            app:layout_constraintStart_toEndOf="@+id/avatarHolder3"
+            app:layout_constraintTop_toBottomOf="@id/tvCast">
+
+            <ImageView
+                android:id="@+id/avatar4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="center"
+                android:src="@drawable/avatar_4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/avatar_4_label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smaller_text_size" />
+        </LinearLayout>
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tvPgMark"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/smaller_text_size"
+            android:layout_marginBottom="4dp"
+            android:text="@string/pg_mark_label"
             android:textColor="@color/white"
-            android:text="@string/avatar_1_label" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/avatarHolder2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tvCast"
-        app:layout_constraintStart_toEndOf="@id/avatarHolder1"
-        app:layout_constraintEnd_toStartOf="@id/avatarHolder3">
-
-        <ImageView
-            android:id="@+id/avatar2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/avatar_2"
-            android:adjustViewBounds="true"
-            android:scaleType="center" />
+            android:textSize="@dimen/smaller_text_size"
+            app:layout_constraintBottom_toTopOf="@id/endHeader"
+            app:layout_constraintStart_toStartOf="@id/startMargin"
+            tools:text="13+" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/smaller_text_size"
+            android:layout_marginTop="4dp"
+            android:text="@string/film_title_label"
             android:textColor="@color/white"
-            android:text="@string/avatar_2_label" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/avatarHolder3"
-        android:layout_height="wrap_content"
-        android:layout_width="0dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tvCast"
-        app:layout_constraintEnd_toStartOf="@+id/avatarHolder4"
-        app:layout_constraintStart_toEndOf="@+id/avatarHolder2">
-        <ImageView
-            android:id="@+id/avatar3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/avatar_3"
-            android:adjustViewBounds="true"
-            android:scaleType="center" />
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/endMargin"
+            app:layout_constraintStart_toStartOf="@id/startMargin"
+            app:layout_constraintTop_toTopOf="@id/endHeader"
+            tools:text="Avengers: End Game" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tvTagline"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/smaller_text_size"
-            android:textColor="@color/white"
-            android:text="@string/avatar_3_label" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/avatarHolder4"
-        android:layout_height="wrap_content"
-        android:layout_width="0dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tvCast"
-        app:layout_constraintEnd_toStartOf="@+id/endMargin"
-        app:layout_constraintStart_toEndOf="@+id/avatarHolder3">
-        <ImageView
-            android:id="@+id/avatar4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/avatar_4"
-            android:adjustViewBounds="true"
-            android:scaleType="center" />
+            android:layout_marginTop="4dp"
+            android:text="@string/tag_line_label"
+            android:textColor="@color/pink_text"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintStart_toStartOf="@id/startMargin"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            tools:text="Action, Adventure, Fantasy" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tvReviewCount"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/smaller_text_size"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/review_count_label"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/normal_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/rbRating"
+            app:layout_constraintTop_toBottomOf="@id/tvTagline"
+            tools:text="125 REVIEWS" />
+
+        <TextView
+            android:id="@+id/tvStoryline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/category_margin_top"
+            android:text="@string/storyline_label"
             android:textColor="@color/white"
-            android:text="@string/avatar_4_label" />
-    </LinearLayout>
+            android:textSize="@dimen/normal_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/startMargin"
+            app:layout_constraintTop_toBottomOf="@id/tvReviewCount"
+            tools:text="Storyline" />
+        <!--    Description area-->
 
-    <TextView
-        android:id="@+id/tvPgMark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="@string/pg_mark_label"
-        android:textColor="@color/white"
-        android:textSize="@dimen/smaller_text_size"
-        app:layout_constraintBottom_toTopOf="@id/endHeader"
-        app:layout_constraintStart_toStartOf="@id/startMargin"
-        tools:text="13+" />
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/description_label"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintEnd_toStartOf="@id/endMargin"
+            app:layout_constraintStart_toEndOf="@id/startMargin"
+            app:layout_constraintTop_toBottomOf="@id/tvStoryline" />
 
-    <TextView
-        android:id="@+id/tvName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/film_title_label"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/endMargin"
-        app:layout_constraintStart_toStartOf="@id/startMargin"
-        app:layout_constraintTop_toTopOf="@id/endHeader"
-        tools:text="Avengers: End Game" />
+        <TextView
+            android:id="@+id/tvCast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/category_margin_top"
+            android:text="@string/cast_label"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/startMargin"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription"
+            tools:text="Cast" />
 
-    <TextView
-        android:id="@+id/tvTagline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/tag_line_label"
-        android:textColor="@color/pink_text"
-        android:textSize="@dimen/normal_text_size"
-        app:layout_constraintStart_toStartOf="@id/startMargin"
-        app:layout_constraintTop_toBottomOf="@id/tvName"
-        tools:text="Action, Adventure, Fantasy" />
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rbRating"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/star_margin_bottom"
+            android:isIndicator="false"
+            android:progressBackgroundTint="@color/gray_text"
+            android:progressTint="@color/pink_text"
+            android:stepSize="1"
+            app:layout_constraintStart_toEndOf="@id/startMargin"
+            app:layout_constraintTop_toBottomOf="@id/tvTagline" />
 
-    <TextView
-        android:id="@+id/tvReviewCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/review_count_label"
-        android:textColor="@color/gray_text"
-        android:textSize="@dimen/normal_text_size"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/rbRating"
-        app:layout_constraintTop_toBottomOf="@id/tvTagline"
-        tools:text="125 REVIEWS" />
-    <!--    Description area-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startMargin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
 
-    <TextView
-        android:id="@+id/tvStoryline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/category_margin_top"
-        android:text="@string/storyline_label"
-        android:textColor="@color/white"
-        android:textSize="@dimen/normal_text_size"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/startMargin"
-        app:layout_constraintTop_toBottomOf="@id/tvReviewCount"
-        tools:text="Storyline" />
+        <!--    Cast-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.309" />
 
-    <TextView
-        android:id="@+id/tvDescription"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/description_label"
-        android:textColor="@color/gray_text"
-        android:textSize="@dimen/normal_text_size"
-        app:layout_constraintEnd_toStartOf="@id/endMargin"
-        app:layout_constraintStart_toEndOf="@id/startMargin"
-        app:layout_constraintTop_toBottomOf="@id/tvStoryline" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endMargin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
 
-    <TextView
-        android:id="@+id/tvCast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/category_margin_top"
-        android:text="@string/cast_label"
-        android:textColor="@color/white"
-        android:textSize="@dimen/normal_text_size"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/startMargin"
-        app:layout_constraintTop_toBottomOf="@id/tvDescription"
-        tools:text="Cast" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/startMargin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
-
-    <!--    Cast-->
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/endHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.309" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/endMargin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
