@@ -16,67 +16,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/ivStar1"
+    <androidx.appcompat.widget.AppCompatRatingBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="@dimen/star_margin_bottom"
-        android:src="@drawable/ic_star"
-        app:layout_constraintBottom_toTopOf="@id/reviewEnd"
-        app:layout_constraintEnd_toStartOf="@+id/ivStar2"
+        android:id="@+id/rbRating"
+        android:isIndicator="false"
+        android:progressTint="@color/pink_text"
+        android:stepSize="1"
+        android:layout_marginTop="@dimen/star_margin_bottom"
+        style="@style/Widget.AppCompat.RatingBar.Small"
         app:layout_constraintStart_toEndOf="@id/startMargin"
-        app:tint="@color/pink_text" />
-
-    <ImageView
-        android:id="@+id/ivStar2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="@dimen/star_margin_bottom"
-        android:src="@drawable/ic_star"
-        app:layout_constraintBottom_toTopOf="@id/reviewEnd"
-        app:layout_constraintEnd_toStartOf="@+id/ivStar3"
-        app:layout_constraintStart_toEndOf="@+id/ivStar1"
-        app:tint="@color/pink_text" />
-
-    <ImageView
-        android:id="@+id/ivStar3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="@dimen/star_margin_bottom"
-        android:src="@drawable/ic_star"
-        app:layout_constraintBottom_toTopOf="@id/reviewEnd"
-        app:layout_constraintEnd_toStartOf="@+id/ivStar4"
-        app:layout_constraintStart_toEndOf="@+id/ivStar2"
-        app:tint="@color/pink_text" />
-
-    <!--    Review area-->
-
-    <ImageView
-        android:id="@+id/ivStar4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="@dimen/star_margin_bottom"
-        android:src="@drawable/ic_star"
-        app:layout_constraintBottom_toTopOf="@id/reviewEnd"
-        app:layout_constraintEnd_toStartOf="@+id/ivStar5"
-        app:layout_constraintStart_toEndOf="@+id/ivStar3"
-        app:tint="@color/pink_text" />
-
-    <ImageView
-        android:id="@+id/ivStar5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="@dimen/star_margin_bottom"
-        android:src="@drawable/ic_star"
-        app:layout_constraintBottom_toTopOf="@id/reviewEnd"
-        app:layout_constraintEnd_toStartOf="@+id/tvReviewCount"
-        app:layout_constraintStart_toEndOf="@+id/ivStar4"
-        app:tint="@color/gray_text" />
+        app:layout_constraintTop_toBottomOf="@id/tvTagline"/>
 
     <LinearLayout
         android:id="@+id/avatarHolder1"
@@ -224,7 +174,7 @@
         android:textColor="@color/gray_text"
         android:textSize="@dimen/normal_text_size"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/ivStar5"
+        app:layout_constraintStart_toEndOf="@+id/rbRating"
         app:layout_constraintTop_toBottomOf="@id/reviewStart"
         tools:text="125 REVIEWS" />
     <!--    Description area-->
