@@ -10,4 +10,5 @@
     <color name="background_color">#191926</color>
     <color name="pink_text">#FF3466</color>
     <color name="gray_text">#6D6D80</color>
+    <color name="transparent">#00000000</color>
 </resources>

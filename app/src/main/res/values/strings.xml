@@ -11,4 +11,5 @@
     <string name="avatar_2_label">Chris Evans</string>
     <string name="avatar_3_label">Mark Ruffalo</string>
     <string name="avatar_4_label">Chris Hemsworth</string>
+    <string name="back_label">Back</string>
 </resources>
