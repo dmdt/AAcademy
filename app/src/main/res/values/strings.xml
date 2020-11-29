@@ -4,4 +4,6 @@
     <string name="tag_line_label">Action, Adventure, Fantasy</string>
     <string name="review_count_label">125 REVIEWS</string>
     <string name="pg_mark_label">13+</string>
+    <string name="description_label">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe.</string>
+    <string name="storyline_label">Storyline</string>
 </resources>

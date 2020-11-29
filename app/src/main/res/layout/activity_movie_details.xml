@@ -20,36 +20,36 @@
         android:id="@+id/ivStar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="@dimen/star_margin_bottom"
         android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toTopOf="@id/reviewEnd"
         app:layout_constraintEnd_toStartOf="@+id/ivStar2"
         app:layout_constraintStart_toEndOf="@id/startMargin"
-        app:layout_constraintTop_toBottomOf="@id/reviewStart"
         app:tint="@color/pink_text" />
 
     <ImageView
         android:id="@+id/ivStar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="@dimen/star_margin_bottom"
         android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toTopOf="@id/reviewEnd"
         app:layout_constraintEnd_toStartOf="@+id/ivStar3"
         app:layout_constraintStart_toEndOf="@+id/ivStar1"
-        app:layout_constraintTop_toBottomOf="@id/reviewStart"
         app:tint="@color/pink_text" />
 
     <ImageView
         android:id="@+id/ivStar3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="@dimen/star_margin_bottom"
         android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toTopOf="@id/reviewEnd"
         app:layout_constraintEnd_toStartOf="@+id/ivStar4"
         app:layout_constraintStart_toEndOf="@+id/ivStar2"
-        app:layout_constraintTop_toBottomOf="@id/reviewStart"
         app:tint="@color/pink_text" />
 
     <!--    Review area-->
@@ -58,24 +58,24 @@
         android:id="@+id/ivStar4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="@dimen/star_margin_bottom"
         android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toTopOf="@id/reviewEnd"
         app:layout_constraintEnd_toStartOf="@+id/ivStar5"
         app:layout_constraintStart_toEndOf="@+id/ivStar3"
-        app:layout_constraintTop_toBottomOf="@id/reviewStart"
         app:tint="@color/pink_text" />
 
     <ImageView
         android:id="@+id/ivStar5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="@dimen/star_margin_bottom"
         android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toTopOf="@id/reviewEnd"
         app:layout_constraintEnd_toStartOf="@+id/tvReviewCount"
         app:layout_constraintStart_toEndOf="@+id/ivStar4"
-        app:layout_constraintTop_toBottomOf="@id/reviewStart"
         app:tint="@color/gray_text" />
 
     <TextView
@@ -83,25 +83,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
+        android:text="@string/pg_mark_label"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@id/endHeader"
         app:layout_constraintStart_toStartOf="@id/startMargin"
-        android:text="@string/pg_mark_label"
         tools:text="13+" />
 
     <TextView
         android:id="@+id/tvName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:text="@string/film_title_label"
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/startMargin"
-        app:layout_constraintTop_toBottomOf="@id/tvPgMark"
         app:layout_constraintTop_toTopOf="@id/endHeader"
-        android:text="@string/film_title_label"
+        app:layout_constraintEnd_toStartOf="@id/endMargin"
         tools:text="Avengers: End Game" />
 
     <TextView
@@ -109,10 +109,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:text="@string/tag_line_label"
         android:textColor="@color/pink_text"
         app:layout_constraintStart_toStartOf="@id/startMargin"
         app:layout_constraintTop_toBottomOf="@id/tvName"
-        android:text="@string/tag_line_label"
         tools:text="Action, Adventure, Fantasy" />
 
 
@@ -122,13 +122,38 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
+        android:text="@string/review_count_label"
         android:textColor="@color/gray_text"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/ivStar5"
         app:layout_constraintTop_toBottomOf="@id/reviewStart"
-        android:text="@string/review_count_label"
         tools:text="125 REVIEWS" />
+
+    <TextView
+        android:id="@+id/tvStoryline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/startMargin"
+        app:layout_constraintTop_toBottomOf="@id/reviewEnd"
+        android:text="@string/storyline_label"
+        tools:text="Storyline" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/description_label"
+        android:textColor="@color/gray_text"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/startMargin"
+        app:layout_constraintTop_toBottomOf="@id/tvStoryline"
+        app:layout_constraintEnd_toStartOf="@id/endMargin"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/startMargin"
@@ -143,6 +168,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.309" />
+    <!--    Description area-->
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/reviewStart"
@@ -150,6 +176,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/tvTagline" />
-    <!--    Description area-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/reviewEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvReviewCount" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
